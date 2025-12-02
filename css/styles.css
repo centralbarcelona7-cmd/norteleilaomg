@@ -3358,6 +3358,27 @@ section {
     cursor: zoom-in;
 }
 
+/* ... código de estilos gerais ... */
+
+/* ===================================
+   CORREÇÃO DE BUG DE RESOLUÇÃO (OVERFLOW)
+   =================================== */
+.app-download {
+    /* Força o container da seção a cortar qualquer excesso horizontal */
+    overflow-x: hidden;
+}
+
+.app-download-visual {
+    /* Garante que o container visual respeite a largura máxima */
+    max-width: 100%;
+    overflow: hidden; /* Adicionado para garantir o corte */
+}
+
+/* =================================== RESPONSIVE =================================== */
+@media (min-width: 1200px) {
+    /* ... seu CSS responsivo começa aqui ... */
+}
+
 /* Responsivo */
 @media (max-width: 768px) {
     .zoom-close {
@@ -3396,5 +3417,6 @@ section {
    
     }
 }
+
 
 
