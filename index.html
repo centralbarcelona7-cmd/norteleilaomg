@@ -1,18 +1,19 @@
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NORTE LEILAO MG - Página Inicial</title>
+        <title>Norte Leilão MG - Página Inicial</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header class="header">
+        <header class="header">
         <div class="container">
             <div class="header-content">
                 <div class="logo">
                     <i class="fas fa-gavel"></i>
-                    <h1>Norte leilao mg</h1>
+                                        <h1>Norte Leilão MG</h1>
                 </div>
                 <nav class="nav">
                     <ul>
@@ -30,11 +31,229 @@
         </div>
     </header>
 
-    <section class="hero">
+        <section class="hero">
         <div class="hero-overlay"></div>
         <div class="container">
             <div class="hero-content">
-                <h2>Encontre o Veículo dos Seus Sonhos </h2>
+                <h2>Encontre o Veículo dos Seus Sonhos</h2>
                 <p>Leilões online com os melhores preços do mercado</p>
                 <div class="hero-search">
                     <input type="text" placeholder="Busque por marca, modelo ou tipo...">
+                    <button class="btn-primary">
+                        <i class="fas fa-search"></i> Buscar
+                    </button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <h3>500+</h3>
+                        <p>Veículos</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>1000+</h3>
+                        <p>Clientes</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>98%</h3>
+                        <p>Satisfação</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <section class="app-download">
+        <div class="container">
+            <div class="app-download-content">
+                <div class="app-download-text">
+                    <h2>📱 Baixe Nosso App</h2>
+
+                  <a href="https://wa.me/3891306950" class="app-button direct-download" onclick="downloadApp('android')">
+                    <p>Acompanhe seus lances em tempo real, receba notificações de novos leilões e não perca nenhuma oportunidade!</p>
+                    <div class="app-features">
+                        <div class="feature-item">
+                            <i class="fas fa-bell"></i>
+                            <span>Notificações em tempo real</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Interface otimizada para mobile</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-heart"></i>
+                            <span>Lista de favoritos</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Acompanhe histórico de lances</span>
+                        </div>
+                    </div>
+                    <div class="app-buttons">
+                                                <a href="https://wa.me/3891306950?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20servi%C3%A7o." class="app-button direct-download" onclick="downloadApp('android')" target="_blank">
+                            <i class="fab fa-android"></i>
+                            <div>
+                                <span class="download-text">Baixar APK</span>
+                                <small>Download direto</small>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="app-download-visual">
+                    <div class="phone-mockup">
+                        <div class="phone-screen">
+                            <div class="app-preview">
+                                <div class="app-header">
+                                    <div class="app-logo">
+                                        <i class="fas fa-gavel"></i>
+                                        <span>Norte Leilão MG</span>
+                                    </div>
+                                </div>
+                                <div class="app-content">
+                                    <div class="app-notification">
+                                        <i class="fas fa-bell"></i>
+                                        <div>
+                                            <strong>Novo lance!</strong>
+                                            <p>Alguém deu lance no Toyota Corolla</p>
+                                        </div>
+                                    </div>
+                                    <div class="app-vehicle-card">
+                                        <img src="https://via.placeholder.com/60x40/4a90e2/ffffff?text=Car" alt="Veículo">
+                                        <div>
+                                            <h4>Toyota Corolla</h4>
+                                            <p>R$ 85.000,00</p>
+                                        </div>
+                                        <button class="app-bid-btn">
+                                            <i class="fas fa-gavel"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <section class="featured-auctions">
+        <div class="container">
+            <div class="section-header">
+                <h2>Leilões em Destaque</h2>
+                <p>Confira os melhores veículos disponíveis agora</p>
+            </div>
+            
+            <div class="auction-grid" id="featured-auctions">
+                            </div>
+
+            <div class="text-center">
+                <a href="catalogo.html" class="btn-secondary">Ver Todos os Veículos</a>
+            </div>
+        </div>
+    </section>
+
+        <section class="categories">
+        <div class="container">
+            <div class="section-header">
+                <h2>Categorias</h2>
+                <p>Escolha o tipo de veículo que você procura</p>
+            </div>
+            
+            <div class="category-grid">
+                <div class="category-card" data-category="carros">
+                    <i class="fas fa-car"></i>
+                    <h3>Carros</h3>
+                </div>
+                <div class="category-card" data-category="motos">
+                    <i class="fas fa-motorcycle"></i>
+                    <h3>Motos</h3>
+                </div>
+                <div class="category-card" data-category="caminhoes">
+                    <i class="fas fa-truck"></i>
+                    <h3>Caminhões</h3>
+                </div>
+                <div class="category-card" data-category="utilitarios">
+                    <i class="fas fa-shuttle-van"></i>
+                    <h3>Utilitários</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <section class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2>Como Funciona</h2>
+                <p>Participe de um leilão em 4 passos simples</p>
+            </div>
+            
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <i class="fas fa-user-plus"></i>
+                    <h3>Cadastre-se</h3>
+                    <p>Crie sua conta gratuitamente em poucos minutos</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <i class="fas fa-search-plus"></i>
+                    <h3>Escolha o Veículo</h3>
+                    <p>Navegue pelo catálogo e encontre o veículo ideal</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <i class="fas fa-gavel"></i>
+                    <h3>Faça seu Lance</h3>
+                    <p>Participe do leilão com lances competitivos</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <i class="fas fa-trophy"></i>
+                    <h3>Ganhe e Retire</h3>
+                    <p>Arrematou? Finalize e retire seu veículo</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Sobre Nós</h3>
+                    <p>Somos uma plataforma especializada em leilões de veículos, oferecendo segurança e transparência em todas as transações.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="catalogo.html">Catálogo</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="login.html">Login</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contato</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> (11) 1234-5678</li>
+                                                <li><i class="fas fa-envelope"></i> contato@norteleilaomg.com.br</li>
+                        <li><i class="fas fa-map-marker-alt"></i> São Paulo, SP</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Redes Sociais</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                                <p>&copy; 2025 Norte Leilão MG. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
